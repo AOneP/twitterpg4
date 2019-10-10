@@ -78,8 +78,12 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
+# production:
+#   <<: *default
+#   database: TwitterPG4_production
+#   username: TwitterPG4
+#   password: <%= ENV['TWITTERPG4_DATABASE_PASSWORD'] %>
 production:
   <<: *default
-  database: TwitterPG4_production
-  username: TwitterPG4
-  password: <%= ENV['TWITTERPG4_DATABASE_PASSWORD'] %>
+  url:  <%= ENV['DATABASE_URL'] %>
+  pool: <%= ENV['DB_POOL'] %>
