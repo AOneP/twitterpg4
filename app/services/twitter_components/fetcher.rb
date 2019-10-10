@@ -1,11 +1,11 @@
 module TwitterComponents
   class Fetcher
     def self.first_fetch
-      binding.pry
-      Service.public_tweets('aleppo', 500, result_type: 'recent').each do |tweet|
+      Service.public_tweets('aleppo', 100, result_type: 'recent').each do |tweet|
         Tweet.create(
           nickname: tweet.user.name,
           text: tweet.text,
+          full_text: tweet.full_text,
           uuid: tweet.id,
           url: tweet.url.to_str,
           tweet_time: tweet.created_at,
