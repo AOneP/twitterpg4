@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+ @import "bootstrap";
+
+ .search-container {
+   display: flex;
+   margin: auto;
+   width: 50%;
+   margin-bottom: 30px;
+   justify-content: center;
+ }
+
+ .margin-id {
+   margin-left: 10px;
+   margin-top: 15px;
+ }
+
+ h1, h2 {
+   text-align: center;
+   margin-bottom: 40px;
+ }
+
+ .pagination {
+   display: flex;
+   justify-content: center;
+ }

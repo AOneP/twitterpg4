@@ -7,6 +7,9 @@ gem 'twitter'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'hirb'
 gem 'pry'
+gem 'bootstrap', '~> 4.3', '>= 4.3.1'
+gem 'kaminari'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use postgresql as the database for Active Record

@@ -1,4 +1,5 @@
 class TweetsController < ApplicationController
   def index
-  end 
+    @tweets = Tweet.search(params[:search]).order(tweet_time: :desc).page(params[:page])
+  end
 end
